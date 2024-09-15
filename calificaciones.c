@@ -16,9 +16,7 @@ int main()
     {
         calificaciones[i] = 0;
     }
-
-    // Para este punto calificaciones esta lleno de 0s, es decir
-    // [0,0,0,0,0,0,0,...]
+    
     printf("En este programa podras ingresar calificaciones del 1 al 10\n");
     printf("Te ayudara a conocer su equivalencia en: A, B, C, D.\n");
     printf("Si ingresas un numero negativo, el programa finalizara\n y obtendras el promedio general de tus calificaciones y su equivalencia\n");
@@ -30,7 +28,6 @@ int main()
         printf("Ingresa la calificacion:  ");
         scanf("%f", &num);
 
-        // Trata de hacerlo una funcion
         if (num >= 9 && num <= 10)
         {
             printf("Tu %f equivale a que obtuviste A", num);
@@ -63,7 +60,6 @@ int main()
         calificaciones[i] = num;
         i++;
     }
-    // Hacer el promedio
     
     totalCalificaciones = i;
     for (i = 0; i < totalCalificaciones; i += 1)
@@ -73,7 +69,7 @@ int main()
     promedio = promedio / totalCalificaciones;
 
     printf("\n");
-    // printf("Obtuviste %f", promedio);
+    
       if (promedio >= 9 && promedio <= 10)
         {
             printf("Promedio: %f, equivale a que obtuviste A", promedio);
@@ -93,7 +89,3 @@ int main()
     printf("\n");
     return 0;
 }
-
-// atol convierte cadena de numero a numeros reales
-// atof convierte numeros flotantes de cadena a numeros
-// atoi usa cadenas grandes para convertir a numeros
